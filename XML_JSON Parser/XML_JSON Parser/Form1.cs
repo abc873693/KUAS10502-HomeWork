@@ -40,10 +40,5 @@ namespace XML_JSON_Parser
                 countyBindingSource.Add(country);
             }
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }
