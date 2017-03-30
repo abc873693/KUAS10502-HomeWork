@@ -40,5 +40,34 @@ namespace XML_JSON_Parser
                 countyBindingSource.Add(country);
             }
         }
+
+        private void ShowRand()
+        {
+            List<String> members = new List<String>();
+            members.Add("1103105345  房志剛");
+            members.Add("1103105328  丁宣文");
+            members.Add("1103105325  劉俊瑋");
+            members.Add("1103105356  方建任");
+            members.Add("1103105305  廖華聖");
+            members.Add("1103105341  陳政穎");
+            members.Add("1103105331  許庭章");
+            members.Add("1103137142  李淑燕");
+            members.Add("1103137146  李翊銘");
+            Random X = new Random();
+            for (int i = 0; i < 1000; i++)
+            {
+                int x = X.Next(members.Count);
+                int y = X.Next(members.Count);
+                String tmp = members[y];
+                members[y] = members[x];
+                members[x] = tmp;
+            }
+            String msg = "";
+            for (int i = 0; i < members.Count; i++)
+            {
+                msg += members[i] + Environment.NewLine;
+            }
+            MessageBox.Show(msg);
+        }
     }
 }

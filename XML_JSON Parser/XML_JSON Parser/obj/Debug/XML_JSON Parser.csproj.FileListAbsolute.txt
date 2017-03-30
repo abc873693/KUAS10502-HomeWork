@@ -1,9 +1,0 @@
-C:\KUAS10502 HomeWork\XML_JSON Parser\XML_JSON Parser\bin\Debug\XML_JSON Parser.exe.config
-C:\KUAS10502 HomeWork\XML_JSON Parser\XML_JSON Parser\bin\Debug\XML_JSON Parser.exe
-C:\KUAS10502 HomeWork\XML_JSON Parser\XML_JSON Parser\bin\Debug\XML_JSON Parser.pdb
-C:\KUAS10502 HomeWork\XML_JSON Parser\XML_JSON Parser\obj\Debug\XML_JSON Parser.csprojResolveAssemblyReference.cache
-C:\KUAS10502 HomeWork\XML_JSON Parser\XML_JSON Parser\obj\Debug\XML_JSON_Parser.Form1.resources
-C:\KUAS10502 HomeWork\XML_JSON Parser\XML_JSON Parser\obj\Debug\XML_JSON_Parser.Properties.Resources.resources
-C:\KUAS10502 HomeWork\XML_JSON Parser\XML_JSON Parser\obj\Debug\XML_JSON Parser.csproj.GenerateResource.Cache
-C:\KUAS10502 HomeWork\XML_JSON Parser\XML_JSON Parser\obj\Debug\XML_JSON Parser.exe
-C:\KUAS10502 HomeWork\XML_JSON Parser\XML_JSON Parser\obj\Debug\XML_JSON Parser.pdb
