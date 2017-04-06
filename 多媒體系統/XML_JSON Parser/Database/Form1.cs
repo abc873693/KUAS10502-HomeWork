@@ -5,13 +5,13 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Serialization;
+using XML_JSON_Parser;
 
-namespace XML_JSON_Parser
+namespace Database
 {
     public partial class Form1 : Form
     {
@@ -20,12 +20,7 @@ namespace XML_JSON_Parser
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button_get_data_Click(object sender, EventArgs e)
+        private void button_get_data_Click(object sender, EventArgs e)
         {
             Data info;
             XmlDocument doc = new XmlDocument();
@@ -37,7 +32,7 @@ namespace XML_JSON_Parser
             }
             foreach (County country in info.Countrys)
             {
-                countyBindingSource.Add(country);
+                DataGridView1.Add(country);
             }
         }
     }

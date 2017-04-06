@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.textBox_X1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -42,10 +42,10 @@
             // 
             // chart1
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(12, 12);
             this.chart1.Name = "chart1";
             this.chart1.Size = new System.Drawing.Size(525, 311);
@@ -61,6 +61,7 @@
             this.textBox_X1.TabIndex = 19;
             this.textBox_X1.Text = "0.3";
             this.textBox_X1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox_X1.TextChanged += new System.EventHandler(this.textBox_X1_TextChanged);
             // 
             // label8
             // 
@@ -71,6 +72,7 @@
             this.label8.Size = new System.Drawing.Size(32, 26);
             this.label8.TabIndex = 18;
             this.label8.Text = "X1";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // textBox_X2
             // 
@@ -81,6 +83,7 @@
             this.textBox_X2.TabIndex = 21;
             this.textBox_X2.Text = "0.7";
             this.textBox_X2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox_X2.TextChanged += new System.EventHandler(this.textBox_X2_TextChanged);
             // 
             // label1
             // 
@@ -91,6 +94,7 @@
             this.label1.Size = new System.Drawing.Size(32, 26);
             this.label1.TabIndex = 20;
             this.label1.Text = "X2";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button_confirm
             // 
