@@ -30,23 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             this.DataGridView1 = new System.Windows.Forms.DataGridView();
+            this.postalCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sectionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.englishDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.countyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button_get_data = new System.Windows.Forms.Button();
             this.form1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.form1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.countyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.postalCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sectionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.englishDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button_save = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.form1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.form1BindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.countyBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // DataGridView1
@@ -67,6 +69,35 @@
             this.DataGridView1.RowTemplate.Height = 24;
             this.DataGridView1.Size = new System.Drawing.Size(601, 255);
             this.DataGridView1.TabIndex = 4;
+            // 
+            // postalCodeDataGridViewTextBoxColumn
+            // 
+            this.postalCodeDataGridViewTextBoxColumn.DataPropertyName = "PostalCode";
+            this.postalCodeDataGridViewTextBoxColumn.HeaderText = "郵遞區號";
+            this.postalCodeDataGridViewTextBoxColumn.Name = "postalCodeDataGridViewTextBoxColumn";
+            this.postalCodeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sectionDataGridViewTextBoxColumn
+            // 
+            this.sectionDataGridViewTextBoxColumn.DataPropertyName = "Section";
+            this.sectionDataGridViewTextBoxColumn.FillWeight = 200F;
+            this.sectionDataGridViewTextBoxColumn.HeaderText = "區域名稱";
+            this.sectionDataGridViewTextBoxColumn.Name = "sectionDataGridViewTextBoxColumn";
+            this.sectionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sectionDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // englishDataGridViewTextBoxColumn
+            // 
+            this.englishDataGridViewTextBoxColumn.DataPropertyName = "English";
+            this.englishDataGridViewTextBoxColumn.FillWeight = 200F;
+            this.englishDataGridViewTextBoxColumn.HeaderText = "英文名稱";
+            this.englishDataGridViewTextBoxColumn.Name = "englishDataGridViewTextBoxColumn";
+            this.englishDataGridViewTextBoxColumn.ReadOnly = true;
+            this.englishDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // countyBindingSource
+            // 
+            this.countyBindingSource.DataSource = typeof(XML_JSON_Parser.County);
             // 
             // button_get_data
             // 
@@ -98,51 +129,42 @@
             // 
             this.dataBindingSource2.DataSource = typeof(XML_JSON_Parser.Data);
             // 
-            // countyBindingSource
+            // button_save
             // 
-            this.countyBindingSource.DataSource = typeof(XML_JSON_Parser.County);
+            this.button_save.Location = new System.Drawing.Point(619, 41);
+            this.button_save.Name = "button_save";
+            this.button_save.Size = new System.Drawing.Size(75, 23);
+            this.button_save.TabIndex = 5;
+            this.button_save.Text = "儲存資料";
+            this.button_save.UseVisualStyleBackColor = true;
+            this.button_save.Click += new System.EventHandler(this.button_save_Click);
             // 
-            // postalCodeDataGridViewTextBoxColumn
+            // richTextBox1
             // 
-            this.postalCodeDataGridViewTextBoxColumn.DataPropertyName = "PostalCode";
-            this.postalCodeDataGridViewTextBoxColumn.HeaderText = "郵遞區號";
-            this.postalCodeDataGridViewTextBoxColumn.Name = "postalCodeDataGridViewTextBoxColumn";
-            this.postalCodeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sectionDataGridViewTextBoxColumn
-            // 
-            this.sectionDataGridViewTextBoxColumn.DataPropertyName = "Section";
-            this.sectionDataGridViewTextBoxColumn.FillWeight = 200F;
-            this.sectionDataGridViewTextBoxColumn.HeaderText = "區域名稱";
-            this.sectionDataGridViewTextBoxColumn.Name = "sectionDataGridViewTextBoxColumn";
-            this.sectionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sectionDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // englishDataGridViewTextBoxColumn
-            // 
-            this.englishDataGridViewTextBoxColumn.DataPropertyName = "English";
-            this.englishDataGridViewTextBoxColumn.FillWeight = 200F;
-            this.englishDataGridViewTextBoxColumn.HeaderText = "英文名稱";
-            this.englishDataGridViewTextBoxColumn.Name = "englishDataGridViewTextBoxColumn";
-            this.englishDataGridViewTextBoxColumn.ReadOnly = true;
-            this.englishDataGridViewTextBoxColumn.Width = 200;
+            this.richTextBox1.Location = new System.Drawing.Point(618, 70);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(76, 197);
+            this.richTextBox1.TabIndex = 6;
+            this.richTextBox1.Text = "";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(709, 284);
+            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.button_save);
             this.Controls.Add(this.DataGridView1);
             this.Controls.Add(this.button_get_data);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countyBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.form1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.form1BindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.countyBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -160,6 +182,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn postalCodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sectionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn englishDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button_save;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 

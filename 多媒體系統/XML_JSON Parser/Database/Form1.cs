@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,8 @@ namespace Database
 {
     public partial class Form1 : Form
     {
+        private const string _connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\KUAS10502 HOMEWORK\多媒體系統\XML_JSON PARSER\DATABASE\DATABASE1.MDF;Integrated Security=True";
+
         public Form1()
         {
             InitializeComponent();
@@ -32,8 +35,51 @@ namespace Database
             }
             foreach (County country in info.Countrys)
             {
-                DataGridView1.Add(country);
+                countyBindingSource.Add(country);
             }
+        }
+
+        private void button_save_Click(object sender, EventArgs e)
+        {
+            var connection = new System.Data.SqlClient.SqlConnection();
+            connection.ConnectionString = _connectionString;
+            connection.Open();
+            int count = 0;
+            foreach (County country in countyBindingSource)
+            {
+                var command = new System.Data.SqlClient.SqlCommand("", connection);
+                command.CommandText = string.Format(@"
+INSERT        INTO    [Table](ID,PostalCode, Section, English)
+VALUES          (N'{0}',N'{1}',N'{2}',N'{3}')
+", count++, country.PostalCode, country.Section, country.English);
+
+                command.ExecuteNonQuery();
+            }
+            var command_find = new System.Data.SqlClient.SqlCommand("", connection);
+            command_find.CommandText = string.Format("SELECT COUNT (PostalCode)  FROM [Table] WHERE PostalCode IS NOT NULL");
+            command_find.ExecuteNonQuery();
+            List<String> strings = ReadSqlData(command_find);
+            richTextBox1.AppendText("總數 = " + strings[0]);
+            connection.Close();
+        }
+
+        private List<String> ReadSqlData(SqlCommand command)
+        {
+            List<String> strings = new List<string>();
+            //4.使用SqlDataReader讀取SqlCommand物件
+            SqlDataReader reader = command.ExecuteReader();
+            try
+            {
+                while (reader.Read())
+                {
+                    strings.Add(reader[0].ToString());
+                }
+            }
+            finally
+            {
+                reader.Close();
+            }
+            return strings;
         }
     }
 }

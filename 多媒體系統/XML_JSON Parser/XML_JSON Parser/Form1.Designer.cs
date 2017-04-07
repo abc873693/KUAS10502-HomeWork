@@ -32,10 +32,10 @@
             this.button_get_data = new System.Windows.Forms.Button();
             this.dataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.countyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.postalCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sectionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.englishDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.countyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.countyBindingSource)).BeginInit();
@@ -73,10 +73,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(601, 255);
             this.dataGridView1.TabIndex = 2;
             // 
-            // countyBindingSource
-            // 
-            this.countyBindingSource.DataSource = typeof(XML_JSON_Parser.County);
-            // 
             // postalCodeDataGridViewTextBoxColumn
             // 
             this.postalCodeDataGridViewTextBoxColumn.DataPropertyName = "PostalCode";
@@ -101,6 +97,10 @@
             this.englishDataGridViewTextBoxColumn.Name = "englishDataGridViewTextBoxColumn";
             this.englishDataGridViewTextBoxColumn.ReadOnly = true;
             this.englishDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // countyBindingSource
+            // 
+            this.countyBindingSource.DataSource = typeof(XML_JSON_Parser.County);
             // 
             // Form1
             // 
