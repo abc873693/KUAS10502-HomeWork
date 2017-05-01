@@ -97,7 +97,7 @@
             // 
             // countyBindingSource
             // 
-            this.countyBindingSource.DataSource = typeof(XML_JSON_Parser.County);
+            //this.countyBindingSource.DataSource = typeof(XML_JSON_Parser.County);
             // 
             // button_get_data
             // 
@@ -111,23 +111,23 @@
             // 
             // form1BindingSource
             // 
-            this.form1BindingSource.DataSource = typeof(Database.Form1);
+            //this.form1BindingSource.DataSource = typeof(Database.Form1);
             // 
             // dataBindingSource
             // 
-            this.dataBindingSource.DataSource = typeof(XML_JSON_Parser.Data);
+//            this.dataBindingSource.DataSource = typeof(XML_JSON_Parser.Data);
             // 
             // dataBindingSource1
             // 
-            this.dataBindingSource1.DataSource = typeof(XML_JSON_Parser.Data);
+//            this.dataBindingSource1.DataSource = typeof(XML_JSON_Parser.Data);
             // 
             // form1BindingSource1
             // 
-            this.form1BindingSource1.DataSource = typeof(XML_JSON_Parser.Form1);
+//            this.form1BindingSource1.DataSource = typeof(XML_JSON_Parser.Form1);
             // 
             // dataBindingSource2
             // 
-            this.dataBindingSource2.DataSource = typeof(XML_JSON_Parser.Data);
+//            this.dataBindingSource2.DataSource = typeof(XML_JSON_Parser.Data);
             // 
             // button_save
             // 

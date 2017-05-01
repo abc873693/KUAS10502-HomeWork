@@ -16,7 +16,7 @@ namespace Database
 {
     public partial class Form1 : Form
     {
-        private const string _connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\KUAS10502 HOMEWORK\多媒體系統\XML_JSON PARSER\DATABASE\DATABASE1.MDF;Integrated Security=True";
+        private const string _connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\PostalDB.MDF;Integrated Security=True";
 
         public Form1()
         {
@@ -25,6 +25,7 @@ namespace Database
 
         private void button_get_data_Click(object sender, EventArgs e)
         {
+            
             Data info;
             XmlDocument doc = new XmlDocument();
             string url = @"http://download.post.gov.tw/post/download/county_h_10603.xml";
@@ -49,7 +50,7 @@ namespace Database
             {
                 var command = new System.Data.SqlClient.SqlCommand("", connection);
                 command.CommandText = string.Format(@"
-INSERT        INTO    [Table](ID,PostalCode, Section, English)
+INSERT        INTO    [Postal](ID,PostalCode, Section, English)
 VALUES          (N'{0}',N'{1}',N'{2}',N'{3}')
 ", count++, country.PostalCode, country.Section, country.English);
 
@@ -59,7 +60,7 @@ VALUES          (N'{0}',N'{1}',N'{2}',N'{3}')
             command_find.CommandText = string.Format("SELECT COUNT (PostalCode)  FROM [Table] WHERE PostalCode IS NOT NULL");
             command_find.ExecuteNonQuery();
             List<String> strings = ReadSqlData(command_find);
-            richTextBox1.AppendText("總數 = " + strings[0]);
+            richTextBox1.AppendText("總數 = " + strings.Count);
             connection.Close();
         }
 
@@ -81,5 +82,6 @@ VALUES          (N'{0}',N'{1}',N'{2}',N'{3}')
             }
             return strings;
         }
+
     }
 }

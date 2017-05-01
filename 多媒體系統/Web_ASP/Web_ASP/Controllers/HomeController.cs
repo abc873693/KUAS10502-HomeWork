@@ -17,7 +17,7 @@ namespace Web_ASP.Controllers
         {
             ViewBag.Message = "Your application description page.";
 
-            return View();
+            return new Web.Controllers.DemoContentController().Index();
         }
 
         public ActionResult Contact()

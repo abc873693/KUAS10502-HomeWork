@@ -53,7 +53,7 @@
             // 
             // dataBindingSource
             // 
-            this.dataBindingSource.DataSource = typeof(XML_JSON_Parser.Data);
+            //this.dataBindingSource.DataSource = typeof(XML_JSON_Parser.Data);
             // 
             // dataGridView1
             // 
@@ -100,7 +100,7 @@
             // 
             // countyBindingSource
             // 
-            this.countyBindingSource.DataSource = typeof(XML_JSON_Parser.County);
+            //this.countyBindingSource.DataSource = typeof(XML_JSON_Parser.County);
             // 
             // Form1
             // 
