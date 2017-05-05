@@ -1,5 +1,4 @@
-﻿using RV.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,11 +8,11 @@ namespace Models.Databases
 {
     public class PostalDatabase
     {
-        private string _connectionString= @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\WaterDB.mdf;Integrated Security=True";
- 
+        private static string _connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\PostalDB.mdf;Integrated Security=True";
 
 
-        public void Create(List<Postal> postals)
+
+        public static void Create(List<Postal> postals)
         {
             var connection = new System.Data.SqlClient.SqlConnection();
             connection.ConnectionString = _connectionString;
@@ -41,7 +40,7 @@ namespace Models.Databases
             connection.Open();
             var command = new System.Data.SqlClient.SqlCommand("", connection);
             command.CommandText = @"
-            Select * from Station";
+            Select * from [Table]";
             var reader = command.ExecuteReader();
 
             while (reader.Read())

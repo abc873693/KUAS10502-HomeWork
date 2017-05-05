@@ -1,10 +1,7 @@
 ﻿using Models;
 using Models.Databases;
 using Models.Service;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using System.Xml;
 using System.Xml.Serialization;
@@ -16,7 +13,7 @@ namespace Web.Controllers
         // GET: DemoContent
         public ActionResult Index()
         {
-           // GetData();
+           //GetData();
             var postalsDatabase = new Models.Databases.PostalDatabase();
 
             var postals = postalsDatabase.FindAllStations();

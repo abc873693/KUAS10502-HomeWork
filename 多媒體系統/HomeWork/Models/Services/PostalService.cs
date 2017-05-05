@@ -1,5 +1,4 @@
-﻿using RV.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -21,7 +20,7 @@ namespace Models.Service
 
             /// <remarks/>
             [System.Xml.Serialization.XmlElementAttribute("county_h_10508")]
-            public Postal[] Countrys
+            public Postal[] Postals
             {
                 get
                 {
@@ -48,5 +47,5 @@ namespace Models.Service
             }
         }
     }
-    
+
 }
