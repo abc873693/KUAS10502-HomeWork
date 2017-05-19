@@ -13,10 +13,10 @@ namespace Web.Controllers
         // GET: DemoContent
         public ActionResult Index()
         {
-           //GetData();
+            //GetData();
             var postalsDatabase = new Models.Databases.PostalDatabase();
 
-            var postals = postalsDatabase.FindAllStations();
+            var postals = Models.Databases.PostalDatabase.FindAllStations();
             var message = string.Format("共收到{0}筆郵遞區號的資料<br/>", postals.Count);
             postals.ForEach(x =>
             {

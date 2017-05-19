@@ -33,7 +33,7 @@ namespace Models.Databases
         }
 
 
-        public List<Postal> FindAllStations()
+        public static List<Postal> FindAllStations()
         {
             var result = new List<Postal>();
             var connection = new System.Data.SqlClient.SqlConnection(_connectionString);
