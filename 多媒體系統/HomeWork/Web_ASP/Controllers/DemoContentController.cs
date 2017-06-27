@@ -14,17 +14,27 @@ namespace Web.Controllers
         public ActionResult Index()
         {
             //GetData();
-            var postalsDatabase = new Models.Databases.PostalDatabase();
+            //var postalsDatabase = new Models.Databases.PostalDatabase();
 
-            var postals = Models.Databases.PostalDatabase.FindAllStations();
-            var message = string.Format("共收到{0}筆郵遞區號的資料<br/>", postals.Count);
-            postals.ForEach(x =>
-            {
-                message += string.Format("郵遞區號：{0},名稱:{1},英文名稱:{2}<br/>", x.PostalCode, x.Section, x.English);
+            //var postals = Models.Databases.PostalDatabase.FindAllStations();
+            //var message = string.Format("共收到{0}筆郵遞區號的資料<br/>", postals.Count);
+            //postals.ForEach(x =>
+            //{
+            //    message += string.Format("郵遞區號：{0},名稱:{1},英文名稱:{2}<br/>", x.PostalCode, x.Section, x.English);
 
 
-            });
-            return Content(message);
+            //});
+            //return Content(message);
+            var stations = Models.Databases.PostalDatabase.FindAllStations();
+            stations = stations
+                .Where(x =>
+                x.PostalCode.ToString().Contains("") ||
+                x.Section.Contains(""))
+                .ToList();
+            ViewBag.Search = "";
+            //ViewBag.Stations = stations;
+
+            return View(stations);
         }
 
         public void GetData()

@@ -55,9 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\PostalData.cs" />
     <Compile Include="Databases\PostalDatabase.cs" />
     <Compile Include="Postal.cs" />
+    <Compile Include="PostalLocation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\PostalLocatioService.cs" />
     <Compile Include="Services\PostalService.cs" />
   </ItemGroup>
   <ItemGroup>
