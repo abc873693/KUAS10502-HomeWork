@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RV.API;
+using RV;
 
 namespace FormsApp
 {
@@ -18,6 +20,16 @@ namespace FormsApp
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+            List<DetailPostalCode> PostalDatas = PostalData.GetDetailPostal();
+            foreach(DetailPostalCode potal in PostalDatas)
+            {
+
+                richTextBox1.AppendText(potal.road + "\n");
+            }
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
