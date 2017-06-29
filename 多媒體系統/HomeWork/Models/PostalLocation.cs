@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace RV
 {
@@ -24,6 +25,7 @@ namespace RV
         private string tGOS_URLField;
 
         /// <remarks/>
+        [XmlElementAttribute("行政區名")]
         public string DistrictName
         {
             get
@@ -51,6 +53,7 @@ namespace RV
         }
 
         /// <remarks/>
+        [XmlElementAttribute("中心點經度")]
         public decimal Longitude
         {
             get
@@ -64,6 +67,7 @@ namespace RV
         }
 
         /// <remarks/>
+        [XmlElementAttribute("中心點緯度")]
         public decimal Latitude
         {
             get

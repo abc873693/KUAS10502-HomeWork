@@ -1,14 +1,14 @@
 ﻿namespace RV.Services
 {
-    class PostalLocationService
+    public class PostalLocationService
     {
 
         /// <remarks/>
         [System.SerializableAttribute()]
         [System.ComponentModel.DesignerCategoryAttribute("code")]
         [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-        [System.Xml.Serialization.XmlRootAttribute(Namespace = "", IsNullable = false)]
-        public partial class dataroot
+        [System.Xml.Serialization.XmlRootAttribute("dataroot", Namespace = "", IsNullable = false)]
+        public partial class XML
         {
 
             private PostalLocation[] item1050429_行政區經緯度toPostField;
@@ -43,9 +43,6 @@
                 }
             }
         }
-
-        
-
-
     }
+
 }

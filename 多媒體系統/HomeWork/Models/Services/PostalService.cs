@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Models.Service
+namespace RV.Service
 {
     public class PostalService
     {
