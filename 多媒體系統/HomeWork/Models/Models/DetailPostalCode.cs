@@ -24,6 +24,7 @@ namespace RV
         private string blockField;
 
         [XmlElementAttribute("欄位1")]
+        [System.ComponentModel.DataAnnotations.Key]
         /// <remarks/>
         public uint Postal_code
         {
@@ -37,6 +38,7 @@ namespace RV
             }
         }
         [XmlElementAttribute("欄位4")]
+        [System.ComponentModel.DataAnnotations.Key]
         /// <remarks/>
         public string city
         {
@@ -50,6 +52,7 @@ namespace RV
             }
         }
         [XmlElementAttribute("欄位2")]
+        [System.ComponentModel.DataAnnotations.Key]
         /// <remarks/>
         public string road
         {
@@ -65,6 +68,7 @@ namespace RV
 
         /// <remarks/>
         [XmlElementAttribute("欄位3")]
+        [System.ComponentModel.DataAnnotations.Key]
         public string block
         {
             get

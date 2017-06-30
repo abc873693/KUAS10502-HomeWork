@@ -12,7 +12,7 @@ namespace Web_ASP.Controllers
         public ActionResult Index(string search = "")
         {
 
-            var stations = RV.Databases.PostalDatabase.FindAllStations();
+            var stations = RV.Databases.PostalDatabase.FindAllPostals();
             if (!string.IsNullOrEmpty(search))
                 stations = stations
                     .Where(x =>

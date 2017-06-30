@@ -22,6 +22,7 @@ namespace RV
 
         /// <remarks/>
         [XmlElementAttribute("欄位1")]
+        [System.ComponentModel.DataAnnotations.Key]
         public int PostalCode
         {
             get
@@ -36,6 +37,7 @@ namespace RV
 
         /// <remarks/>
         [XmlElementAttribute("欄位2")]
+        [System.ComponentModel.DataAnnotations.Key]
         public string Section
         {
             get
@@ -50,6 +52,7 @@ namespace RV
 
         /// <remarks/>
         [XmlElementAttribute("欄位3")]
+        [System.ComponentModel.DataAnnotations.Key]
         public string English
         {
             get

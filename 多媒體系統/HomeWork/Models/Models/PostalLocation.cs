@@ -14,7 +14,7 @@ namespace RV
     public partial class PostalLocation
     {
 
-        private string DistrictNameField;
+        private string SectionField;
 
         private ushort PostalCodeField;
 
@@ -26,20 +26,22 @@ namespace RV
 
         /// <remarks/>
         [XmlElementAttribute("行政區名")]
-        public string DistrictName
+        [System.ComponentModel.DataAnnotations.Key]
+        public string Section
         {
             get
             {
-                return this.DistrictNameField;
+                return this.SectionField;
             }
             set
             {
-                this.DistrictNameField = value;
+                this.SectionField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("3碼郵遞區號")]
+        [System.ComponentModel.DataAnnotations.Key]
         public ushort PostalCode
         {
             get
@@ -54,6 +56,7 @@ namespace RV
 
         /// <remarks/>
         [XmlElementAttribute("中心點經度")]
+        [System.ComponentModel.DataAnnotations.Key]
         public decimal Longitude
         {
             get
@@ -68,6 +71,7 @@ namespace RV
 
         /// <remarks/>
         [XmlElementAttribute("中心點緯度")]
+        [System.ComponentModel.DataAnnotations.Key]
         public decimal Latitude
         {
             get
@@ -81,6 +85,7 @@ namespace RV
         }
 
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.Key]
         public string TGOS_URL
         {
             get

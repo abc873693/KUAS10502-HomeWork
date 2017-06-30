@@ -11,6 +11,7 @@
     <AssemblyName>Models</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,7 +24,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -68,9 +68,10 @@
     <Compile Include="Databases\PostalDatabase.cs" />
     <Compile Include="Databases\PostalDbContext.cs" />
     <Compile Include="Databases\PostalDbInit.cs" />
-    <Compile Include="DetailPostalCode.cs" />
-    <Compile Include="Postal.cs" />
-    <Compile Include="PostalLocation.cs" />
+    <Compile Include="Databases\PostalLocationDatabase.cs" />
+    <Compile Include="Models\DetailPostalCode.cs" />
+    <Compile Include="Models\Postal.cs" />
+    <Compile Include="Models\PostalLocation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DetailPostalCodeService.cs" />
     <Compile Include="Services\PostalLocatioService.cs" />
@@ -89,6 +90,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\PostalDB.mdf" />
+    <Content Include="App_Data\PostalDB_log.ldf">
+      <DependentUpon>PostalDB.mdf</DependentUpon>
+    </Content>
     <Content Include="Resource\DetailPostalCode.xml" />
   </ItemGroup>
   <ItemGroup>

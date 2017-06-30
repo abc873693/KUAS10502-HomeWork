@@ -25,7 +25,7 @@ namespace Web.Controllers
 
             //});
             //return Content(message);
-            var stations = RV.Databases.PostalDatabase.FindAllStations();
+            var stations = RV.Databases.PostalDatabase.FindAllPostals();
             stations = stations
                 .Where(x =>
                 x.PostalCode.ToString().Contains("") ||
