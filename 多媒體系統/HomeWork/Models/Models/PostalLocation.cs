@@ -18,9 +18,9 @@ namespace RV
 
         private ushort PostalCodeField;
 
-        private decimal LongitudeField;
+        private float LongitudeField;
 
-        private decimal LatitudeField;
+        private float LatitudeField;
 
         private string tGOS_URLField;
 
@@ -57,7 +57,7 @@ namespace RV
         /// <remarks/>
         [XmlElementAttribute("中心點經度")]
         [System.ComponentModel.DataAnnotations.Key]
-        public decimal Longitude
+        public float Longitude
         {
             get
             {
@@ -72,7 +72,7 @@ namespace RV
         /// <remarks/>
         [XmlElementAttribute("中心點緯度")]
         [System.ComponentModel.DataAnnotations.Key]
-        public decimal Latitude
+        public float Latitude
         {
             get
             {

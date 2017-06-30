@@ -7,6 +7,22 @@
         body {
             padding-top: 60pt;
         }
+        .list-group-horizontal .list-group-item {
+            display: inline-table;
+            width: 30%;
+            box-sizing: border-box;
+            background-clip: content-box;
+            padding-right: 20px;
+        }
+            .list-group-horizontal .list-group-item:first-child {
+                border-top-right-radius: 0;
+                border-bottom-left-radius: 4px;
+            }
+
+            .list-group-horizontal .list-group-item:last-child {
+                border-top-right-radius: 4px;
+                border-bottom-left-radius: 0;
+            }
     </style>
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
 </head>

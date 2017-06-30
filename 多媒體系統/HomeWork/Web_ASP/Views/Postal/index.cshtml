@@ -1,14 +1,19 @@
-﻿@model List<Models.Postal>
+﻿@model List<RV.Postal>
 
 @{
+
     Layout = "~/Views/Shared/_Layout.cshtml";
     var Search = ViewBag.Search;
-    var Stations = Model;//ViewBag.Stations;
-
+    var postal = Model;//ViewBag.Stations;
 
     //this.Model
 }
-<form class="form-inline" method="post" action="~/Station/Index">
+
+<iframe height="400px" width="100%" frameborder="0" scrolling="no" src="~/Postal/Map" allowfullscreen="false">
+
+</iframe>
+
+<form class="form-inline" method="post" action="~/Postal">
     <div class="form-group">
 
         <input type="text" class="form-control" placeholder="名稱"
@@ -16,7 +21,7 @@
                value="@ViewBag.Search">
     </div>
 
-    <button type="submit" class="btn btn-default">搜尋</button>
+    <button href="" type="submit" class="btn btn-default">搜尋</button>
 </form>
 <hr />
 <div class="list-group">
@@ -26,10 +31,15 @@
     @for (int i = 0; i < Model.Count; i++)
     {
 
-        <a class="list-group-item">
-            <h4 class="list-group-item-heading">@Model[i].Section</h4>
-            <p class="list-group-item-text">@Model[i].PostalCode</p>
-        </a>
+        <div class="list-group-item">
+            <div class="list-group list-group-horizontal">
+                <a class="list-group-item">@Model[i].PostalCode</a>
+                <a class="list-group-item">@Model[i].Section</a>
+                <a href="~/Postal?PostalCode=@Model[i].PostalCode" id="PostalCode" class="btn btn-primary">查詢位置</a>
+
+            </div>
+
+        </div>
 
     }
 

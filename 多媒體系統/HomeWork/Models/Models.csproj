@@ -90,15 +90,14 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\PostalDB.mdf" />
-    <Content Include="App_Data\PostalDB_log.ldf">
-      <DependentUpon>PostalDB.mdf</DependentUpon>
-    </Content>
     <Content Include="Resource\DetailPostalCode.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

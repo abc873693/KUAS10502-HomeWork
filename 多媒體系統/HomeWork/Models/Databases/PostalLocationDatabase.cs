@@ -21,7 +21,7 @@ namespace RV.Databases
                 var command = new System.Data.SqlClient.SqlCommand("", connection);
                 command.CommandText = string.Format(@"
                 INSERT        INTO    [PostalLocation](ID,PostalCode, Section, Longitude,Latitude)
-                VALUES          (N'{0}',N'{1}',N'{2}',N'{3},N'{4}')
+                VALUES          (N'{0}',N'{1}',N'{2}',N'{3}',N'{4}')
                 ", count++, postallocation.PostalCode, postallocation.Section, postallocation.Longitude, postallocation.Latitude);
 
                 command.ExecuteNonQuery();

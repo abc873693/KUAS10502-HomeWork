@@ -23,9 +23,12 @@ namespace FormsApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            setDBFilePath();
-            var db = new PostalDbContext();
-            var postals = db.PostalTable.ToList();
+            PostalDatabase.FindAllPostals();
+            //setDBFilePath();
+            //var db = new PostalDbContext();
+            //var postals = db.PostalTable.ToList();
+            var postals = PostalDatabase.FindAllPostals();
+            richTextBox1.AppendText(postals.Count + "\n");
             foreach (var potal in postals)
             {
 

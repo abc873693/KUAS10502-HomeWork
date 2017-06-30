@@ -23,7 +23,7 @@ namespace RV.Databases
             {
                 var command = new System.Data.SqlClient.SqlCommand("", connection);
                 command.CommandText = string.Format(@"
-                INSERT        INTO    [Postal](ID,PostalCode, Section, English)
+                INSERT        INTO    [PostalTable](ID,PostalCode, Section, English)
                 VALUES          (N'{0}',N'{1}',N'{2}',N'{3}')
                 ", count++, postal.PostalCode, postal.Section, postal.English);
 
@@ -40,7 +40,7 @@ namespace RV.Databases
             connection.Open();
             var command = new System.Data.SqlClient.SqlCommand("", connection);
             command.CommandText = @"
-            Select * from [Postal]";
+            Select * from [PostalTable]";
             var reader = command.ExecuteReader();
 
             while (reader.Read())
