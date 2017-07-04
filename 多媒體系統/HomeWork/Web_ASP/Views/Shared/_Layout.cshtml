@@ -35,13 +35,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("郵遞區號查詢", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("首頁", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("郵遞區號", "Index", "Home")</li>
-                    <li>@Html.ActionLink("關於", "About", "Home")</li>
-                    <li>@Html.ActionLink("連絡方式", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("郵遞區號查詢", "index", "Postal")</li>
+                    <li>@Html.ActionLink("關於", "Contact", "Home")</li>
                 </ul>
             </div>
         </div>

@@ -32,9 +32,9 @@
     {
 
         <div class="list-group-item">
-            <div class="list-group list-group-horizontal">
-                <a class="list-group-item">@Model[i].PostalCode</a>
-                <a class="list-group-item">@Model[i].Section</a>
+            <div class="list-group list-group-horizontal" style="border:none">
+                <a class="list-group-item"style="border:none">@Model[i].PostalCode</a>
+                <a class="list-group-item"style="border:none">@Model[i].Section</a>
                 <a href="~/Postal?PostalCode=@Model[i].PostalCode" id="PostalCode" class="btn btn-primary">查詢位置</a>
 
             </div>
