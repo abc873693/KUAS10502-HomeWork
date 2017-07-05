@@ -68,6 +68,14 @@ namespace Web_ASP.Controllers
                 ViewBag.English = postal.English;
 
             }
+            else
+            {
+                ViewBag.Lat = 0;
+                ViewBag.lng = 0;
+                ViewBag.PostalCode =-1;
+                ViewBag.Section = 0;
+                ViewBag.English = 0;
+            }
 
             return View();
         }

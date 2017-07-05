@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace RV.Databases
 {
-    public  class PostalLocationDatabase
+    public class PostalLocationDatabase
     {
         private static string _connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\PostalDB.mdf;Integrated Security=True";
 
@@ -46,8 +46,8 @@ namespace RV.Databases
                 //item.ID = reader["ID"].ToString();
                 item.PostalCode = (UInt16)Convert.ToInt16(reader["PostalCode"]);
                 item.Section = reader["Section"].ToString();
-                item.Longitude = Convert.ToInt32(reader["Longitude"]);
-                item.Latitude = Convert.ToInt32(reader["Latitude"]);
+                item.Longitude = (float)Convert.ToDouble(reader["Longitude"]);
+                item.Latitude = (float)Convert.ToDouble(reader["Latitude"]);
                 result.Add(item);
             }
             connection.Close();
